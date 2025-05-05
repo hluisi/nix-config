@@ -20,7 +20,4 @@
     dock.show-recents = false;
     finder.FXPreferredViewStyle = "clmv";
   };
-
-  # Reuse system.stateVersion from common.nix unless explicitly overridden
-  system.stateVersion = lib.mkDefault "23.11";
-}
+  }

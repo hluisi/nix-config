@@ -20,12 +20,13 @@
     wget
   ];
 
-  # Minimal shared fonts example (optional override per-host)
+  # Shared Nerd Fonts using new namespace
   fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "FiraCode" "JetBrainsMono" ]; })
+    nerd-fonts.fira-code
+    nerd-fonts.jetbrains-mono
   ];
 
   # Default system.stateVersion to prevent rebuild warnings
   # (Each host can override if necessary.)
-  system.stateVersion = lib.mkDefault "23.11";
+  system.stateVersion = lib.mkDefault 6;
 }
