@@ -26,6 +26,16 @@
     pfetch
   ];
 
+  # Ensure Kitty themes repository is cloned (or updated) every activation
+  system.activationScripts.kittyThemes.text = ''
+    THEME_DIR="$HOME/.config/kitty/themes"
+    if [ ! -d "$THEME_DIR" ]; then
+      git clone --depth 1 https://github.com/dexpota/kitty-themes.git "$THEME_DIR"
+    else
+      (cd "$THEME_DIR" && git pull)
+    fi
+  '';
+
   # Shared Nerd Fonts using new namespace
   fonts.packages = with pkgs; [
     nerd-fonts.fira-code
