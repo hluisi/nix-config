@@ -17,12 +17,9 @@
   environment.systemPackages = with pkgs; [
     # Mac-specific GUI / utilities
     alacritty
-    brave
-    kitty
     mkalias
     obsidian
     pfetch
-    vscode
 
     # Optional zsh plugins
     # zsh-autosuggestions

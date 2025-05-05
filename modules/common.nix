@@ -20,6 +20,9 @@
     wget
     cargo
     ffmpeg
+    brave
+    kitty
+    vscode
   ];
 
   # Shared Nerd Fonts using new namespace
