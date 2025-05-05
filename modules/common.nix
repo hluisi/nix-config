@@ -18,6 +18,8 @@
     lsd
     starship
     wget
+    cargo
+    ffmpeg
   ];
 
   # Shared Nerd Fonts using new namespace
