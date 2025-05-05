@@ -23,6 +23,7 @@
     brave
     kitty
     vscode
+    pfetch
   ];
 
   # Shared Nerd Fonts using new namespace
