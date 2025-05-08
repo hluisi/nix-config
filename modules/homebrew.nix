@@ -14,6 +14,7 @@
     # Formulae and casks installed via Homebrew
     brews = [
       "mas"
+      "portaudio"
     ];
     casks = [
       "ghostty"

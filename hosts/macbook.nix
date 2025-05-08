@@ -19,7 +19,7 @@
     alacritty
     mkalias
     obsidian
-
+    
     # Optional zsh plugins
     # zsh-autosuggestions
     # zsh-history
@@ -44,11 +44,14 @@
       "/System/Applications/Calendar.app"
       "/Applications/Ghostty.app"
       "${pkgs.brave}/Applications/Brave Browser.app"
+      "${pkgs.kitty}/Applications/kitty.app"
       "/System/Cryptexes/App/System/Applications/Safari.app"
       "/Applications/Signal.app"
       "/Applications/Wispr Flow.app"
       "/Applications/CleanMyMac_5_MAS.app"
       "${pkgs.vscode}/Applications/Visual Studio Code.app"
+      "/Applications/Mixed In Key 11.app"
+      "/Applications/Platinum Notes 10.app"
     ];
 
     finder.FXPreferredViewStyle = "clmv";

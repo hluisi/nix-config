@@ -16,25 +16,19 @@
     git
     vim
     lsd
+    bat
     starship
     wget
     cargo
     ffmpeg
     brave
     kitty
+    kitty-themes
     vscode
     pfetch
   ];
 
-  # Ensure Kitty themes repository is cloned (or updated) every activation
-  system.activationScripts.kittyThemes.text = ''
-    THEME_DIR="$HOME/.config/kitty/themes"
-    if [ ! -d "$THEME_DIR" ]; then
-      git clone --depth 1 https://github.com/dexpota/kitty-themes.git "$THEME_DIR"
-    else
-      (cd "$THEME_DIR" && git pull)
-    fi
-  '';
+  # Kitty themes are provided declaratively via the package `pkgs.kitty-themes`.
 
   # Shared Nerd Fonts using new namespace
   fonts.packages = with pkgs; [
@@ -44,5 +38,9 @@
 
   # Default system.stateVersion to prevent rebuild warnings
   # (Each host can override if necessary.)
+  # Expose kitty-themes under /run/current-system/sw so Kitty can reference a
+  # stable path that never contains a changing store hash.
+  environment.pathsToLink = [ "/share/kitty-themes" ];
+
   system.stateVersion = lib.mkDefault 6;
 }
